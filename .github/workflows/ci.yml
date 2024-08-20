@@ -55,7 +55,7 @@ jobs:
         id: login-ecr
         shell: bash
         run: |
-          echo 'registry=123456789012.ecr-fips.us-gov-west-1.amazonaws.com' >> "$GITHUB_ENV"
+          echo 'registry=123456789012.ecr-fips.us-gov-west-1.amazonaws.com' >> "$GITHUB_OUTPUT"
 
       - name: Generate Docker Metadata for ECR
         if: github.ref == 'refs/heads/main'
